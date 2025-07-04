@@ -17,9 +17,10 @@ import { PlotManager } from "@/components/PlotManager";
 import { TaskManager } from "@/components/TaskManager";
 import { WeatherWidget } from "@/components/WeatherWidget";
 import { AIAssistant } from "@/components/AIAssistant";
+import { ScheduleManager } from "@/components/ScheduleManager";
 import heroImage from "@/assets/vineyard-hero.jpg";
 
-type ViewType = 'dashboard' | 'plots' | 'tasks' | 'weather' | 'assistant';
+type ViewType = 'dashboard' | 'plots' | 'tasks' | 'weather' | 'assistant' | 'schedule';
 
 const Index = () => {
   const [currentView, setCurrentView] = useState<ViewType>('dashboard');
@@ -34,6 +35,8 @@ const Index = () => {
         return <WeatherWidget />;
       case 'assistant':
         return <AIAssistant />;
+      case 'schedule':
+        return <ScheduleManager />;
       default:
         return <Dashboard setCurrentView={setCurrentView} />;
     }
@@ -62,6 +65,7 @@ const Index = () => {
               { id: 'dashboard', label: 'Dashboard', icon: Grape },
               { id: 'plots', label: 'Plots', icon: MapPin },
               { id: 'tasks', label: 'Tasks', icon: Calendar },
+              { id: 'schedule', label: 'Schedule', icon: Calendar },
               { id: 'weather', label: 'Weather', icon: CloudSun },
               { id: 'assistant', label: 'AI Assistant', icon: Bot },
             ].map(({ id, label, icon: Icon }) => (
