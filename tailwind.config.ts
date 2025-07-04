@@ -52,6 +52,15 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Agricultural theme colors
+				grape: {
+					DEFAULT: 'hsl(var(--grape))',
+					light: 'hsl(var(--grape-light))'
+				},
+				forest: 'hsl(var(--forest))',
+				harvest: 'hsl(var(--harvest))',
+				earth: 'hsl(var(--earth))',
+				sky: 'hsl(var(--sky))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -62,6 +71,15 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-earth': 'var(--gradient-earth)',
+				'gradient-farm': 'var(--gradient-farm)'
+			},
+			boxShadow: {
+				'farm': 'var(--shadow-farm)',
+				'card': 'var(--shadow-card)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
